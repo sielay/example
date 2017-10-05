@@ -1,0 +1,48 @@
+<section>
+    <h3>{{ title }}</h3>
+    <label>
+        <span>Name</span>    
+        <input readonly [ngModel]="(party | async).name"/>
+    </label>
+
+
+    <label>
+      <span>Account Name</span>
+      <input readonly [ngModel]="(party | async).account_name" />
+    </label>
+    
+    <label>
+      <span>Account Number</span>
+      <input readonly [ngModel]="(party | async).account_number" />
+    </label>
+    
+    <label>
+      <span>Account Number Code</span>
+      <input readonly [ngModel]="(party | async).account_number_code" />
+    </label>
+    
+    <label>
+      <span>Account Type</span>
+      <input readonly [ngModel]="(party | async).account_type" />
+    </label>
+    
+    <label>
+      <span>Address</span>
+      <input readonly [ngModel]="(party | async).address" />
+    </label>
+    
+    <label>
+      <span>Name</span>
+      <input readonly [ngModel]="(party | async).name" />
+    </label>
+    
+    <label>
+      <span>Bank ID</span>
+      <input readonly [ngModel]="(party | async).bank_id" />
+    </label>
+    
+    <label>
+      <span>Bank ID Code</span>
+      <input readonly [ngModel]="(party | async).bank_id_code" />
+    </label>
+  </section>

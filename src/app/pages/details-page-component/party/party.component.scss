@@ -1,0 +1,5 @@
+@import "../details-page-component.component.scss";
+
+:host {
+    @include section();
+}

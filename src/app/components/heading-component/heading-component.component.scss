@@ -1,0 +1,24 @@
+:host {
+    background: #D8D8D8;
+    display: block;
+    height: 3rem;
+
+    > header {
+        margin: 0px;
+        padding: .5rem 1rem;
+
+        > h1 {
+            margin: 0px;
+            padding: 0px;
+            display: inline-block;
+            line-height: 2rem;
+            font-size: 2rem;
+            font-weight: normal;
+            > a, > a:hover, > a:active, > a:link, > a:visited {
+                color: #FFFFFF;
+                text-decoration: none;
+            }
+        }
+    }
+
+}
