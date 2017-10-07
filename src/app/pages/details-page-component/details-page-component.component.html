@@ -1,0 +1,27 @@
+<nav>
+  <a [routerLink]="'/'">Back</a>
+</nav>
+<main>
+  
+  <section>
+    <h3>Details</h3>
+    <label>
+      <span>Reference</span>    
+      <input readonly [ngModel]="payment.reference | async"/>
+    </label>
+    <label>
+        <span>Amount</span>    
+        <input readonly [ngModel]="payment.amount | async"/>
+    </label>
+    <label>
+        <span>ProcessingDate</span>    
+        <input readonly [ngModel]="payment.processingDate | async"/>
+    </label>
+  </section>
+  <app-party [title]="'Debtor'" [party]="payment.debtor"></app-party>
+  <app-party [title]="'Beneficiary'" [party]="payment.beneficiary"></app-party>
+  <app-party [title]="'Sponsor'" [party]="payment.sponsor"></app-party>
+  <section></section>
+  <section></section>
+  <hr/>
+</main>

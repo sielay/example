@@ -1,0 +1,46 @@
+<nav>
+  <input placeholder="Search"/>
+</nav>
+<main>
+<table>
+  <thead>
+    <tr>
+      <th (click)="sort('reference')" >Reference</th>
+      <th (click)="sort('amount')" >Amount</th>
+      <th (click)="sort('currency')" >Currency</th>
+      <th (click)="sort('processing_date')" >Processing date </th>
+      <th (click)="sort('debtor')" >Debtor</th>
+      <th (click)="sort('beneficient')" >Beneficient</th>
+      <th (click)="sort('sponsor')" >Sponsor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr 
+      *ngFor="let payment of listItems | async"
+      (click)="details(payment)"
+      >
+      <td>
+        {{ payment.reference | async }}        
+      </td>
+      <td>
+        {{ (payment.amount | async).amount }}
+      </td>      
+      <td>
+        {{ (payment.amount | async).currency }}
+      </td>      
+      <td>
+        {{ payment.processingDate | async | date:'shortDate' }}
+      </td>      
+      <td>
+        {{ (payment.debtor | async).name }}
+      </td>      
+      <td>
+        {{ (payment.beneficiary | async).name }}
+      </td>      
+      <td>
+        {{ (payment.sponsor | async).name }}
+      </td>      
+    </tr>
+  </tbody>
+</table>
+</main>

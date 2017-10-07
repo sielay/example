@@ -1,0 +1,92 @@
+
+$background: #E8E8E8;
+$text: #A2A2A2;
+
+:host {
+    background: white;
+    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: stretch;
+    padding: 0;
+    margin: 0;
+
+    > nav {
+        background-color: $background;
+        order: 0;
+        flex: 0 0 auto;
+        align-self: auto;
+        height: 3rem;
+        padding: 1rem 1rem 0rem 1rem;
+        > input {
+            height: 1.5rem;
+            min-width: 10rem;
+            font-size: 1rem;
+            padding-left: 2rem;
+
+            @media only screen and (max-width: 600px) {
+                width: calc(100% - 2rem);
+            }
+            
+            &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                color: $text;
+            }
+            &::-moz-placeholder { /* Firefox 19+ */
+                color: $text;
+            }
+            &:-ms-input-placeholder { /* IE 10+ */
+                color: $text;
+            }
+            &:-moz-placeholder { /* Firefox 18- */
+                color: $text;
+            }
+        }
+    }
+
+    > main {
+        order: 0;
+        flex: 1 1 auto;
+        align-self: auto;
+        overflow: auto;
+        padding: 1rem;
+
+        > table {
+
+            margin:0;
+            padding:0;
+            background:none;
+            border:none;
+            border-collapse:collapse;
+            border-spacing:0;
+            background-image:none;
+
+            th, td {
+                cursor: pointer;
+                color: black;
+                padding: .5rem;
+                margin: 0rem;
+                font-size: 1rem;
+                font-weight: normal;
+                border: 1px solid $text;
+                height: 1rem;
+            }
+            th {
+                background-color: $background;
+                &:hover {
+                    background-color: darken($background, 5%);
+                }                    
+            }
+            tr {
+                background-color: #FFFFFF;
+                &:hover {
+                    background-color: darken(#FFFFFF, 5%);
+                }
+            }
+
+        }
+    }
+
+}
